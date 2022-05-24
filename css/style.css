@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;600&display=swap');
+
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: inherit;
+}
+button {
+    margin: 0; padding: 0;
+    border: none;
+    background: none;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Radio Canada', sans-serif;
+}
+main {
+    flex-grow: 1;
+    padding: 48px 2%;
+    background-color: lightcyan;
+}
+
+header {
+    padding: 24px 48px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.add-book {
+    display: block;
+    font-size: 1.5rem;
+    transition: all 350ms ease;
+    margin-inline: auto;
+    padding: 8px 16px;
+    margin-bottom: 48px;
+    border-radius: 16px;
+}
+.modal {
+    position: fixed;
+    margin-inline: auto;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    background-color: gainsboro;
+    padding: 24px;
+    border: 1px solid black;
+    border-radius: 16px;
+}
+.form-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+input {
+    font-size: 1.25rem;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    width: 90%;
+}
+#read-or-not {
+    font-size: 1rem;
+    height: 0.75em;
+    width: 0.75em;
+}
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+.form-actions button {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border-radius: 12px;
+}
+.btn-submit {
+    background-color: aquamarine;
+}
+.btn-cancel {
+    background-color:lightsalmon;
+}
+.add-book:hover {
+    transform: scale(1.1);
+    background-color:khaki;
+}
+.books {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.book {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    background-color: white;
+    padding: 32px;
+    border-radius: 16px;
+}
+.book-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.book-author,
+.book-pages,
+.btn-book-remove,
+.btn-book-read {
+    font-size: 1.2rem;
+}
+.btn-book-remove,
+.btn-book-read {
+    font-weight: 600;
+    padding-block: 16px;
+    width: 100%;
+    border-radius: 10px;
+    transition: all 300ms ease;
+}
+.btn-book-remove:hover,
+.btn-book-read:hover {
+    transform: scale(1.05);
+}
+.btn-book-read {
+    background-color: #eb6e6e;
+}
+.read {
+    background-color: #35fe71;
+}
+.btn-book-remove {
+    background-color: #eb6e6e;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding-block: 32px;
+}
+footer a {
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: all 350ms ease;
+}
+footer a:hover {
+    transform: scale(1.1);
+}

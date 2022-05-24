@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="css/meyer.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Library</h1>
+    </header>
+    <main>
+        <button class="add-book">+ Add book</button>
+        <form class="modal">
+            <h2 class="form-title">Add new book</h2>
+            <input type="text" name="title" id="title" placeholder="Title" required>
+            <input type="text" name="author" id="author" placeholder="Author" required>
+            <input type="number" name="numPages" id="num-pages" min="20" max="10000" placeholder="Pages" required>
+            <label for="read-or-not">
+                have you read it?<input type="checkbox" name="readOrNot" id="read-or-not">
+            </label>
+            <section class="form-actions">
+                <button class="btn-submit" type="submit">Submit</button>
+                <button class="btn-cancel">Cancel</button>
+            </section>
+        </form>
+        <div class="modal same-book-alert">
+            <h3 class="form-title">
+                Same book is already included
+                in your library!
+            </h3>
+            <button class="btn-book-alert">OK</button>
+        </div>
+        <section class="books">
+
+        </section>
+    </main>
+    <footer>
+        <a href="https://github.com/RakhmanIbrayev" target="_blank">
+            GitHub
+        </a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
