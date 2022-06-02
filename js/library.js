@@ -72,7 +72,7 @@ let library = (function() {
     function _removeBook(book) {
         for (let i = 0; i < books.length; i++) {
             if (books[i] === book) {
-                books.splice(i);
+                books.splice(i, 1);
             }
         }
         _updateUILibrary();
@@ -118,7 +118,7 @@ let library = (function() {
     
         // Add new elements to the new book
         uiBook.append(bookTitle, bookAuthor, bookPages, btnReadBook, btnRemoveBook);
-    
+
         return uiBook;
     }
 
