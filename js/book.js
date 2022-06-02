@@ -1,49 +1,45 @@
-function Book (title = "x", author = "x", numPages = 0, isRead = "false") {
-    let bookTitle = title;
-    let bookAuthor = author;
-    let bookNumPages = numPages;
-    let isBookRead = isRead;
+class Book {
+    #title = 'x';
+    #author = 'x';
+    #numPages = 0;
+    #isRead = false;
 
-    function setTitle (title) {
-        bookTitle = title;
+    constructor(title, author, numPages, isRead) {
+        this.#title = title;
+        this.#author = author;
+        this.#numPages = numPages;
+        this.#isRead = isRead;
     }
 
-    function getTitle () {
-        return bookTitle;
+    set title(title) {
+        this.#title = title;
     }
 
-    function setAuthor(author) {
-        bookAuthor = author;
+    get title() {
+        return this.#title;
     }
 
-    function getAuthor() {
-        return bookAuthor;
+    set author(author) {
+        this.#author = author;
     }
 
-    function setNumPages(numPages) {
-        bookNumPages = numPages;
+    get author() {
+        return this.#author;
     }
 
-    function getNumPages() {
-        return bookNumPages;
+    set numPages(numPages) {
+        this.#numPages = numPages;
     }
 
-    function setIsRead(isRead) {
-        isBookRead = isRead;
+    get numPages() {
+        return this.#numPages
     }
 
-    function getIsRead() {
-        return isBookRead;
+    set isRead(isRead) {
+        this.#isRead = isRead;
     }
 
-    return {
-        setTitle,
-        getTitle,
-        setAuthor,
-        getAuthor,
-        setNumPages,
-        getNumPages,
-        setIsRead,
-        getIsRead
+    get isRead() {
+        return this.#isRead;
     }
 }
