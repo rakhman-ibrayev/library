@@ -70,10 +70,9 @@ let library = (function() {
     // Private method remove a book from the UI
     // @param book - book that needs to be removed
     function _removeBook(book) {
-
         for (let i = 0; i < books.length; i++) {
             if (books[i] === book) {
-                books.splice(i);
+                books.splice(i, 1);
             }
         }
         _updateUILibrary();
