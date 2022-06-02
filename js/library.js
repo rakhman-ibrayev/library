@@ -46,7 +46,7 @@ let library = (function() {
     // @param book - book whose status will be displayed
     // @param btnReadBook - button that will display the status
     function _displayBookButtonReadStatus(book, btnReadBook) {
-        if (book.getIsRead()) {
+        if (book.isRead) {
             btnReadBook.textContent = 'Read';
             btnReadBook.classList.add('read');
         } else {
@@ -60,9 +60,9 @@ let library = (function() {
     // @param book - book whose read status property will be toggled
     // @param btnReadBook - button that will display the status
     function _readBook(book, btnReadBook) {
-        let bookReadStatus = book.getIsRead();
+        let bookReadStatus = book.isRead;
         bookReadStatus = !bookReadStatus;
-        book.setIsRead(bookReadStatus);
+        book.isRead = bookReadStatus;
         _displayBookButtonReadStatus(book, btnReadBook);
         _updateUILibrary();
     }
@@ -70,6 +70,7 @@ let library = (function() {
     // Private method remove a book from the UI
     // @param book - book that needs to be removed
     function _removeBook(book) {
+
         for (let i = 0; i < books.length; i++) {
             if (books[i] === book) {
                 books.splice(i);
@@ -110,9 +111,9 @@ let library = (function() {
         });
     
         // Add content to new elements
-        bookTitle.textContent = book.getTitle();
-        bookAuthor.textContent = book.getAuthor();
-        bookPages.textContent = book.getNumPages();
+        bookTitle.textContent = book.title;
+        bookAuthor.textContent = book.author;
+        bookPages.textContent = book.numPages;
         _displayBookButtonReadStatus(book, btnReadBook);
         btnRemoveBook.textContent = 'Remove';
     
@@ -150,7 +151,7 @@ let library = (function() {
         let author = document.getElementById('author').value;
         let numPages = document.getElementById('num-pages').value;
         let isRead = document.getElementById('read-or-not').checked;
-        let book = Book(title, author, numPages, isRead);
+        let book = new Book(title, author, numPages, isRead);
     
         if (bookAlreadyInLibrary(book)) {
             openModal(sameBookAlert);
@@ -181,7 +182,7 @@ let library = (function() {
     // @param book - book that needs to be checked
     function bookAlreadyInLibrary(book) {
         for (let i = 0; i < books.length; i++) {
-            if (books[i].title === book.getTitle() || books[i].author === book.getAuthor()) {
+            if (books[i].title === book.title || books[i].author === book.author) {
                 return true;
             }
         }
