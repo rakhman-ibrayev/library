@@ -168,13 +168,13 @@ let library = (function() {
     // Unhides a modal
     // @param modal - modal that needs to be unhidden
     function openModal(modal) {
-        modal.style.zIndex = '1';
+        modal.style.visibility = 'visible';
     }
     
     // Hides a modal
     // @param modal - modal that needs to be hidden
     function closeModal(modal) {
-        modal.style.zIndex = '-1';
+        modal.style.visibility = 'hidden';
     }
 
     // Checks if a book is already in the library
