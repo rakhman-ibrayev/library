@@ -11,4 +11,4 @@ This is a simple project from The Odin Project JavaScript course which essential
   - CSS grid, flex display properties
   - Different CSS positionings
 
-## Check out the (demo)[https://rakhmanibrayev.github.io/library/] to see the project in action
+## Check out the [demo](https://rakhmanibrayev.github.io/library/) to see the project in action
